@@ -1,0 +1,142 @@
+Feature: Joining Last.Fm bugs
+
+  Scenario: testing Last.fm Join page Username Field
+    Given open last.fm join page and accepted cookies
+    When User fills out Username field with "k"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "llllaaaattttoooo"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with " abc"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "Gie rmek"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "Giormek "
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "------"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "______"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "2_____"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "      "
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "2345"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "0oro"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "-minus"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "_podloga"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "łódź"
+    Then Comment about incorrection pops out
+
+    When User fills out Username field with "[]=- "
+    Then Comment about incorrection pops out
+
+
+  Scenario: testing Last.fm Join page Email Field
+    Given open last.fm join page and accepted cookies
+    When User fills out email field with "ninochamail.com"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "ninocha@mail."
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "ninocha@mail.c"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "ninocha@mail.c/"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "ninocha@ma*il.com"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "ninocha@.com"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "@co.com"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "ninocha@mail..uk"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "2mail.uk"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "ni"
+    Then Comment about incorrection pops out
+
+    When User fills out email field with "ninocha@mail.coment"
+    Then System ACCEPTS it
+
+    When User fills out email field with "ad@poczta.fmfale3-"
+    Then Comment about incorrection pops out
+
+  Scenario: testing Last.fm Join page Password Field
+    Given open last.fm join page and accepted cookies
+    When User fills out password field with "A"
+    Then Comment about incorrection pops out
+
+    When User fills out password field with "Blabl3"
+    Then Comment about incorrection pops out
+
+    When User fills out password field with "Blabl*-"
+    Then Comment about incorrection pops out
+
+    When User fills out password field with "/*-/*-"
+    Then Comment about incorrection pops out
+
+    When User fills out password field with "123456"
+    Then Comment about incorrection pops out
+
+    When User fills out password field with "    "
+    Then Comment about incorrection pops out
+
+  Scenario: testing Last.fm Join page Field skipped
+    Given open last.fm join page and accepted cookies
+    When User fills out all fields correct, but passes Username field
+    Then Comment asking to fill in the field pops out
+
+    When User fills out all fields correct, but passes Email field
+    Then Comment asking to fill in the field pops out
+
+    When User fills out all fields correct, but passes Password field
+    Then Comment asking to fill in the field pops out
+
+    When User fills out all fields correct, but passes Confirm Password field
+    Then Comment asking to fill in the field pops out
+
+    When User fills out all fields correct, but don't ticks the captcha box
+    Then Comment 'You didn't complete the captcha properly. Try again?' pops out
+
+    When User fills out all fields correct, but don't ticks the terms box
+    Then Comment 'Not quite so fast! Please agree to these terms first.' pops out
+
+
+
+  Scenario: testing Last.fm Join page misspell password
+    Given open last.fm join page and accepted cookies
+    When User fills out all fields correct, but misspells in Confirm Password field
+    Then Comment  that Passwords don't match
+
+  Scenario: testing Last.fm Join page while being already assigned / already used
+    Given open last.fm join page and accepted cookies
+    When User fills out Username field with used username
+    Then Comment 'Sorry, this username isn't available.' pops out
+
+    When User fills out Email field with used e-mail address
+    Then Comment 'Sorry, that email address is already registered to another account.' pops out
