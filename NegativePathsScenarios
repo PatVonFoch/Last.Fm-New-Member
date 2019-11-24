@@ -1,142 +1,284 @@
 Feature: Joining Last.Fm bugs
 
-  Scenario: testing Last.fm Join page Username Field
+  Scenario: testing Last.fm Join page USERNAME Field
     Given open last.fm join page and accepted cookies
     When User fills out Username field with "k"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "llllaaaattttoooo"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with " abc"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "Gie rmek"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "Giormek "
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "------"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "______"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "2_____"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "      "
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "2345"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "0oro"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "-minus"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "_podloga"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "łódź"
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
     When User fills out Username field with "[]=- "
+    And  User fills out correctly other fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
 
-  Scenario: testing Last.fm Join page Email Field
+
+  Scenario: testing Last.fm Join page EMAIL Field
     Given open last.fm join page and accepted cookies
-    When User fills out email field with "ninochamail.com"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ninochamail.com"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "ninocha@mail."
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ninocha@mail."
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "ninocha@mail.c"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ninocha@mail.c"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "ninocha@mail.c/"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ninocha@mail.c/"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "ninocha@ma*il.com"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ninocha@ma*il.com"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "ninocha@.com"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ninocha@.com"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "@co.com"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "@co.com"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "ninocha@mail..uk"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ninocha@mail..uk"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "2mail.uk"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "2mail.uk"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "ni"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ni"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out email field with "ninocha@mail.coment"
-    Then System ACCEPTS it
-
-    When User fills out email field with "ad@poczta.fmfale3-"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ninocha@mail.coment"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion will be FALSE
 
-  Scenario: testing Last.fm Join page Password Field
+    When User fills out Username field with "Ninogniew"
+    And  User fills out email field with "ad@poczta.fmfale3-"
+    And  User ticks all check-boxes and submits to create account
+    Then Comment about incorrection pops out
+    And  Assertion
+    
+
+
+  Scenario: testing Last.fm Join page PASSWORD Field
     Given open last.fm join page and accepted cookies
-    When User fills out password field with "A"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out Email field with "nino@mail.co"
+    And  User fills out password field with "B"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out password field with "Blabl3"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out Email field with "nino@mail.co"
+    And  User fills out password field with "Blabl3"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out password field with "Blabl*-"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out Email field with "nino@mail.co"
+    And  User fills out password field with "Blabl*-"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out password field with "/*-/*-"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out Email field with "nino@mail.co"
+    And  User fills out password field with "/*-/*-"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out password field with "123456"
+    When User fills out Username field with "Ninogniew"
+    And  User fills out Email field with "nino@mail.co"
+    And  User fills out password field with "123456"
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
 
-    When User fills out password field with "    "
+    When User fills out Username field with "Ninogniew"
+    And  User fills out Email field with "nino@mail.co"
+    And  User fills out password field with "    "
+    And  User ticks all check-boxes and submits to create account
     Then Comment about incorrection pops out
+    And  Assertion
+    
+
 
   Scenario: testing Last.fm Join page Field skipped
     Given open last.fm join page and accepted cookies
-    When User fills out all fields correct, but passes Username field
+    When User passes Username field
+    And  User fills out remaining fields correct
+    And  User ticks all check-boxes and submits to create account
     Then Comment asking to fill in the field pops out
+    And  Assertion
 
-    When User fills out all fields correct, but passes Email field
+    When User fills out Username field correct
+    And  User passes Email field
+    And  User fills out remaining fields correct
+    And  User ticks all check-boxes and submits to create account
     Then Comment asking to fill in the field pops out
+    And  Assertion
 
-    When User fills out all fields correct, but passes Password field
+    When User fills out Username and Email fields correct
+    And  User passes Password field
+    And  User fills out remaining field correct
+    And  User ticks all check-boxes and submits to create account
     Then Comment asking to fill in the field pops out
+    And  Assertion
 
-    When User fills out all fields correct, but passes Confirm Password field
+    When User fills out Username, Email and Password fields correct
+    And  passes Confirm Password field
+    And  User ticks all check-boxes and submits to create account
     Then Comment asking to fill in the field pops out
+    And  Assertion
 
-    When User fills out all fields correct, but don't ticks the captcha box
+    When User fills out all fields correct
+    And  User don't ticks the captcha box
+    And  User ticks the terms box
     Then Comment 'You didn't complete the captcha properly. Try again?' pops out
+    And  Assertion
 
-    When User fills out all fields correct, but don't ticks the terms box
+    When User fills out all fields correct
+    And  User ticks the captcha box
+    And  User don't ticks the terms box
     Then Comment 'Not quite so fast! Please agree to these terms first.' pops out
+    And  Assertion
 
 
 
-  Scenario: testing Last.fm Join page misspell password
+  Scenario: testing Last.fm Join page misspell passwords
     Given open last.fm join page and accepted cookies
-    When User fills out all fields correct, but misspells in Confirm Password field
-    Then Comment  that Passwords don't match
+    When User fills out all fields correct
+    And  misspells in Confirm Password field
+    And  User ticks all check-boxes and submits to create account
+    Then Comment that Passwords don't match
+    And  Assertion
+
+
 
   Scenario: testing Last.fm Join page while being already assigned / already used
     Given open last.fm join page and accepted cookies
     When User fills out Username field with used username
+    And  User fills out correctly remaining fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment 'Sorry, this username isn't available.' pops out
+    And  Assertion
 
-    When User fills out Email field with used e-mail address
+    When User fills out correctly Username field
+    And  User fills out Email field with used e-mail address
+    And  User fills out correctly remaining fields
+    And  User Ticks check-boxes and submits to create account
     Then Comment 'Sorry, that email address is already registered to another account.' pops out
+    And  Assertion
